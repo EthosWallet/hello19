@@ -1,0 +1,15 @@
+{
+  "name": "@my-org/workspace-a",
+  "version": "1.0.0",
+  "description": "Workspace package A",
+  "dependencies": {
+    "express": "^4.18.0",
+    "@my-org/workspace-b": "workspace:*",
+    "missing-workspace-cross-dep": "workspace:^1.0.0",
+    "external-missing-dep": "^1.0.0"
+  },
+  "devDependencies": {
+    "workspace-dev-missing": "workspace:*",
+    "cross-workspace-dev": "file:../workspace-b"
+  }
+}
