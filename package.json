@@ -1,0 +1,44 @@
+{
+  "name": "@my-org/test-app",
+  "version": "1.0.0",
+  "description": "Test app for dependency confusion scanning",
+  "workspaces": [
+    "workspace-a",
+    "workspace-b",
+    "packages/*"
+  ],
+  "dependencies": {
+    "express": "^4.18.0",
+    "lodash": "^4.17.21",
+    "nonexistent-pkg-12345": "^1.0.0",
+    "my-private-internal-lib": "^2.1.0",
+    "company-secret-module": "workspace:*",
+    "missing-workspace-pkg": "workspace:^1.0.0",
+    "@my-org/shared-utils": "file:./local-packages/shared-utils",
+    "@my-org/missing-local": "file:./nonexistent-folder/lib",
+    "linked-dependency": "link:../external-projects/utils"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "webpack": "^5.0.0",
+    "missing-dev-tool-xyz": "^1.0.0",
+    "internal-build-scripts": "^3.2.1",
+    "typosquatted-lodahs": "^4.0.0",
+    "fake-jest-plugin": "workspace:*",
+    "@company/missing-dev-lib": "file:./tools/missing-tool"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "missing-peer-dep": "^1.0.0"
+  },
+  "optionalDependencies": {
+    "optional-missing-pkg": "^1.0.0",
+    "workspace-optional": "workspace:*"
+  },
+  "scripts": {
+    "build": "npm install missing-build-tool && webpack",
+    "test": "yarn add test-helper-missing && jest",
+    "setup": "pnpm add setup-utility-fake"
+  }
+}
