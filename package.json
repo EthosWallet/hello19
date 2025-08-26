@@ -14,8 +14,8 @@
     "my-private-internal-lib": "^2.1.0",
     "company-secret-module": "workspace:*",
     "missing-workspace-pkg": "workspace:^1.0.0",
-    "@my-org/shared-utils": "file:./local-packages/shared-utils",
-    "@my-org/missing-local": "file:./nonexistent-folder/lib",
+    "@salesforce/cli": "file:./local-packages/shared-utils",
+    "@salesforce/cli1232132131231": "file:./nonexistent-folder/lib",
     "linked-dependency": "link:../external-projects/utils"
   },
   "devDependencies": {
