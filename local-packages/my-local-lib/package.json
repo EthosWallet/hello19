@@ -1,0 +1,8 @@
+{
+  "name": "@my-org/my-local-lib",
+  "version": "1.0.0",
+  "description": "Local package for file: dependency testing",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
